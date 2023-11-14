@@ -1,0 +1,46 @@
+
+:root {
+    font-family: sans-serif ;
+    google font;
+    canva color combination;
+    css typografhy;
+
+    --text-color: #fff;
+    --text-accent-color: #fff;
+}
+
+body {
+    background-color: black;
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-accent-color);
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+.content {
+    display: flex;
+    flex-direction: row-reverse;
+} 
+
+header h1 {
+    margin: 0;
+    font-size: 64px;
+    letter-spacing: -5px;
+    color: var(--text-accent-color);
+}
+
+main {
+    background-color: blue;
+    padding: 1rem;
+}
+
+aside {
+    background: red;
+    padding: 1rem;
+}
+
