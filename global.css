@@ -1,6 +1,5 @@
-
 :root {
-    font-family: sans-serif ;
+    font-family: sans-serif;
     google font;
     canva color combination;
     css typografhy;
@@ -25,7 +24,15 @@ a:hover {
 .content {
     display: flex;
     flex-direction: row-reverse;
-} 
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
 
 header h1 {
     margin: 0;
@@ -43,4 +50,3 @@ aside {
     background: red;
     padding: 1rem;
 }
-
