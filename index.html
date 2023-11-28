@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+        integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-  <title>Stopwatch</title>
+  <title>Final Project</title>
   <style>
     .timer {
       display: flex;
@@ -19,29 +23,78 @@
     function timer() {
       time = time + 1;
       let timeDisplay = document.getElementById('time').innerText = time + 'sec'; 
-      console.log(time);
     }
     function startTimer() {
       interval = setInterval(timer, 1000);
-      console.log(time);
     }
     function stopTimer() {
       clearInterval(interval);
-      console.log(time);
     }
     function resetTimer() {
       time = 0;
       let timeDisplay = document.getElementById('time').innerText = time + 'sec'; 
-      console.log(time);
     }
+    const changeMenu = () => {
+            let x = document.getElementById('menu-items');
+            if(x.className.includes('show')){
+                x.className = 'mobile-menu-items'
+            } else {
+                x.className += ' show'
+            }
+     }
   </script>
 </head>
 <body class="container">
-  <div class="timer">
-    <h1 id="time">0sec</h1>
-  </div>
-  <button onclick="startTimer()">Start</button>
-  <button onclick="stopTimer()">Stop</button>
-  <button onclick="resetTimer()">Reset</button>
-</body>
+  
+  <header>
+    <h1>Final Project</h1>
+</header>
+<nav>
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <a href="#">Link 4</a>
+</nav>
+<div class="mobile-menu" >
+    <a href="javascript:void(0);" class="icon" onclick="changeMenu()">
+        <i class="ri-menu-line"></i>
+    </a>
+
+    <div class="mobile-menu-items" id="menu-items">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+    </div>
+</div>
+<div class="content">
+    <main>
+        <h1>Blog Post 1</h1>
+        <span>01.01.2023</span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nisi delectus iusto voluptas. Saepe sequi
+            optio excepturi doloribus quis? Nisi ducimus velit ex debitis dolores maiores nam veniam nemo nostrum?
+        </p>
+        <h1>Blog Post 2</h1>
+        <span>01.02.2023</span>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptas alias aut error. Molestiae
+            illo quis, voluptas provident modi magni praesentium maxime quisquam mollitia illum ad. Fugiat dolorum
+            quod a!</p>
+         <div class="timer">
+             <h1 id="time">0sec</h1>
+         </div>
+         <button onclick="startTimer()">Start</button>
+         <button onclick="stopTimer()">Stop</button>
+         <button onclick="resetTimer()">Reset</button>    
+    </main>
+    <aside>
+        <h1>Sidebar</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla sequi temporibus a. Qui molestiae at quos
+            similique assumenda vitae quod! Inventore porro quo beatae ea quos odit neque velit tenetur.</p>
+    </aside>
+</div>
+<footer>
+    <p>Copyright 2023</p>
+</footer>
+  
+ </body>
 </html>

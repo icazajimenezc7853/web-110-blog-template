@@ -1,24 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;500;600;700;800&display=swap');
+
 :root {
-    font-family: sans-serif;
-    google font;
-    canva color combination;
-    css typografhy;
-
+    font-family: 'Kanit', sans-serif;
+    --background-color: #000000;
+    --background-accent-color: #A49393;
     --text-color: #fff;
-    --text-accent-color: #fff;
-}
-
-body {
-    background-color: black;
-    color: var(--text-color);
-}
-
-a {
-    color: var(--text-accent-color);
-}
-
-a:hover {
-    color: var(--text-color);
+    --text-accent-color: #E8B4B8;
 }
 
 .content {
@@ -32,8 +19,6 @@ a:hover {
     gap: 2rem;
 }
 
-
-
 header h1 {
     margin: 0;
     font-size: 64px;
@@ -41,12 +26,78 @@ header h1 {
     color: var(--text-accent-color);
 }
 
+main h1 {
+    font-weight: 400;
+    text-decoration: underline dashed var(--text-accent-color);
+}
+
+nav {
+    display: flex;
+    /* justify-content: space-evenly;  */
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+a {
+    color: var(--text-color);
+    text-transform: uppercase;
+    padding: 1rem;
+    background-color: var(--text-accent-color);
+    /* margin-right: 4rem; */
+}
+
+a:hover {
+    color: var(--background-color);
+}
+
 main {
-    background-color: blue;
+    width: 75%;
+    background: blue;
     padding: 1rem;
 }
 
 aside {
-    background: red;
+    width: 25%;
+    background: var(--background-accent-color);
     padding: 1rem;
+}
+
+header {
+    background-color: var(--background-accent-color);
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu-items {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    nav {
+        display: none;
+    }
+
+    aside {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .mobile-menu {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+        justify-content: center;
+    }
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
 }
